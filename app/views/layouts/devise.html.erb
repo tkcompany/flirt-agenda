@@ -9,10 +9,17 @@
   </head>
 
   <body>
+  
+  <% if controller_name == "sessions" || controller_name == "registrations" %>
     <!-- Navbar -->
     <%= render "layouts/partials/navbar"%>
+  <% end %>
+    <%= render :partial => 'layouts/partials/flash_messages', :flash => flash %>
     <%= yield %>
-    <!-- Footer -->
-    <%= render "layouts/partials/footer" %>
+    <% if controller_name == "sessions" || controller_name == "registrations" %>
+    <!-- Navbar -->
+    <%= render "layouts/partials/footer"%>
+  <% end %>
+    
   </body>
 </html>
