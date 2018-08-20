@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   # Default routes.
+
+  get 'home' => 'profil#index', as: :profil
+
   devise_scope :user do
     root to: "users/sessions#new"
   end

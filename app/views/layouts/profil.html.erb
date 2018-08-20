@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlirtAgenda</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <%= render "layouts/partials/navbar"%>
+   
+    
+    <div class="container profil-wraper">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Sidebar -->
+                <%= render "layouts/partials/sidebar" %>
+            </div>
+            <div class="col-md-9">
+                <%= yield %>
+            </div>
+        </div>
+    </div>
+    
+   
+    <!-- Footer -->
+    <%= render "layouts/partials/footer" %>
+  </body>
+</html>
