@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :profiles
   # Default routes.
 
   get 'home' => 'profil#index', as: :profil
